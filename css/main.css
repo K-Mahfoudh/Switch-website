@@ -16,7 +16,14 @@
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+  
 }
+    body{
+      margin: 0px;
+} 
 
 /*
  * Remove text-shadow in selection highlight:
@@ -121,22 +128,24 @@ textarea {
 }
 
 .bg-custom{
-    background-color: white;
+    background-color: transparent;
+      transition: all 1s;
 }
 
 .color-custom{
-    color:white;
+    background-color: white;
 }
 
 
 #main-nav-list{
-    transition: all 0.5s;
+    transition: all 1s;
+  
 }
 
 .hidden{
     display:hidden;
-   
 }
+
 
 
 
