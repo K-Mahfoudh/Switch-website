@@ -95,23 +95,48 @@ textarea {
     padding: 0.2em 0;
 }
 
+#main-navbar-nav > li{
+    margin-left: 15%;
+    font-size: 1.2em;
+}
 
+.navbar-brand{
+    font-size: 1.6em;
+}
 
+.fadeClass{
+    opacity: 0.3;
+}
 
  /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+#main-navbar-nav{
+    margin-right: 20%;
+}
+
+.navbar-brand{
+    margin-left: 12%;
+}
+
+.bg-custom{
+    background-color: white;
+}
+
+.color-custom{
+    color:white;
+}
 
 
+#main-nav-list{
+    transition: all 0.5s;
+}
 
-
-
-
-
-
-
-
+.hidden{
+    display:hidden;
+   
+}
 
 
 
