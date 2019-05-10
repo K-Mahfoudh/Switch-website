@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'distant_galaxyregular';
+    src: url('../fonts/distantgalaxy_regular_macroman/DISTGRG_-webfont.eot');
+    src: url('../fonts/distantgalaxy_regular_macroman/DISTGRG_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/distantgalaxy_regular_macroman/DISTGRG_-webfont.woff2') format('woff2'),
+         url('../fonts/distantgalaxy_regular_macroman/DISTGRG_-webfont.woff') format('woff'),
+         url('../fonts/distantgalaxy_regular_macroman/DISTGRG_-webfont.ttf') format('truetype'),
+         url('../fonts/distantgalaxy_regular_macroman/DISTGRG_-webfont.svg#distant_galaxyregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
