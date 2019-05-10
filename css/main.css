@@ -102,14 +102,7 @@ textarea {
     padding: 0.2em 0;
 }
 
-#main-navbar-nav > li{
-    margin-left: 15%;
-    font-size: 1.2em;
-}
 
-.navbar-brand{
-    font-size: 1.6em;
-}
 
 .fadeClass{
     opacity: 0.3;
@@ -122,31 +115,104 @@ textarea {
 #main-navbar-nav{
     margin-right: 20%;
 }
+#main-navbar-nav > li{
+    margin-left: 15%;
+    font-size: 1.4em;
+    
+}
+
 
 .navbar-brand{
+    font-size: 2em;
     margin-left: 12%;
+    font-weight: bold;
+
 }
 
-.bg-custom{
-    background-color: transparent;
-      transition: all 1s;
+
+.color-transparent{
+  -webkit-animation-name: switch;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.8s;  /* Safari 4.0 - 8.0 */  
+  -webkit-animation-delay: 0.1s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+  animation-name: switch;
+  animation-duration: 0.8s;  
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+
+    -webkit-transition: background-color 2s; /* Safari */
+  transition: background-color 2s;
+
 }
+@-webkit-keyframes switch {
+ from {background-color: white;}
+  to {background-color: transparent;}
+}
+
+@keyframes switch {
+ from {background-color: white;}
+  to {background-color: transparent;}
+}
+
 
 .color-custom{
-    background-color: white;
+  -webkit-animation-name: fadeIn;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.5s;  /* Safari 4.0 - 8.0 */  
+  -webkit-animation-delay: 0.2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+  animation-name: fadeIn;
+  animation-duration: 0.5s;  
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  background-color: white;
+
+}
+@-webkit-keyframes fadeIn {
+   from {background-color: transparent;}
+  to {background-color: white;}
+}
+
+@keyframes fadeIn {
+ from {background-color: transparent;}
+  to {background-color: white;}
 }
 
 
-#main-nav-list{
-    transition: all 1s;
-  
+/*this part is for fadeout animation for the navbar,since it doesn't work for reasons that i ignore, i used css animation*/
+.hide{
+    
+  -webkit-animation-name: fadeOut;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 0.6s;  /* Safari 4.0 - 8.0 */  
+  -webkit-animation-delay: 0.2s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+  animation-name: fadeOut;
+  animation-duration: 0.6s;  
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+  visibility: visible;
+    
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fadeOut {
+   from {opacity: 1;visibility: visible;}
+  to {opacity: 0;visibility: hidden;}
 }
 
-.hidden{
-    display:hidden;
+@keyframes fadeOut {
+  from {opacity: 1;visibility: visible;}
+  to {opacity: 0;visibility: hidden;}
 }
 
-
+.main-header-title-col{
+    margin-top: 5%;
+    font-size: 12vmin;
+    text-align: center;
+    font-family: 'distant_galaxyregular','arial';
+    	background: linear-gradient(to right, darkgray 15%, gray 100%);
+	    -webkit-background-clip: text;
+	    -webkit-text-fill-color: transparent;
+    
+}
 
 
 
