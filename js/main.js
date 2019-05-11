@@ -7,9 +7,13 @@ var noRepeat = true;
 
 function main(){
    scrollDetect();
+   giveMeIdeas();
+    SwitchLight()
     
 }
 $(document).ready(main);
+
+/* =========================================================================================== This function is made for the header animation, show hide and stuff, and since i had some problems with hide,show,fadeIn and fadeOut, i had to use css animation in order to simulate these effects, don't blame i couldn't find any solution :/ ====================================================================*/
 
 function scrollDetect(){
 
@@ -33,7 +37,34 @@ function scrollDetect(){
            }
        }
        scrollValue= newScrollValue;
-   })
-  
-    
+   })   
 }
+
+/* ===========================================================================================This function is for index page lampe event, when you click on the lamp, a box will disapear and a little form will appear, you never know we may need their ideas :D ====================================================================*/
+function giveMeIdeas(){
+    $('#main-light-lampe').click(function(){
+        $('#slide-1').slideUp("slow");
+        $('#main-light-lampe').addClass('keep-the-light'); //turning the light on
+        $('#on-off').fadeIn(1000);
+        $('#slide-2').delay(600).slideDown("slow");
+      
+        //applying the shadows
+        $('.aplly-shadow-1').addClass('shadow-1');
+        $('.aplly-shadow-2').addClass('shadow-2'); 
+        $('form input,textarea,button').addClass('box-shadow-2');
+       
+        
+    });
+}
+
+/* ===========================================================================================This function is for the on/off switch button====================================================================*/
+var on = true;
+function SwitchLight(){
+    $('#switch-button').change(function() {
+      $('#main-light-lampe').toggleClass('keep-the-light');
+      $('.aplly-shadow-1').toggleClass('shadow-1');
+      $('.aplly-shadow-2').toggleClass('shadow-2'); 
+      $('form input,textarea,button').toggleClass('box-shadow-2');
+    });
+    }  
+

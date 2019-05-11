@@ -203,20 +203,109 @@ textarea {
   to {opacity: 0;visibility: hidden;}
 }
 
-.main-header-title-col{
-    margin-top: 5%;
-    font-size: 12vmin;
+.main-header-title-col h1{
+    margin-top: 20vh;
+    margin-bottom: 0px;
+    font-size: 18vmin;
     text-align: center;
     font-family: 'distant_galaxyregular','arial';
-    	background: linear-gradient(to right, darkgray 15%, gray 100%);
-	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
+    background: linear-gradient(to right, lightgray 15%, darkgray 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        -webkit-filter: drop-shadow(0 0 70px #6895ed );
+  filter: drop-shadow(0 0 2px #6895ed) brightness(126%);
     
 }
 
+.main-header-title-col h2{
+    width: 39%;
+    margin: auto;
+    margin-top: 0px;
+    font-size:2.4vmin;
+    font-family: 'kanitextralight','arial';
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, lightgray 15%, darkgray 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+}
+.main-content-info{
+    margin-top: 20%;
+    text-align: center;
+    color: white;
+    font-family: 'kanitextralight','arial';
+}
+.main-content-info h2{
+    font-size: 6vmin;
+}
+.main-content-info p{
+    font-size: 3vmin;
+}
+#main-club-presentation-text{
+  padding-left: 7%;
+}
 
+.main-content-info figure{
+    text-align: center;
+}
+.main-content-info figure img{ /*this part is to controll the max size of the img*/
+   max-width: 70vw;
+   max-height: 70vh;
+   padding-top: 20%;
+}
+.main-content-info figure img:hover{
+ 
+  -webkit-filter: drop-shadow(0 0 85px #6895ed );
+  filter: drop-shadow(0 0 85px #6895ed) brightness(180%); /* this part is to apply light effect on the lampe img (principalement faite pour avoir les idées des visiteurs du site,will explain it later)*/
+  cursor: pointer;
+}
+#slide-2{
+    display: none;
+}
 
+.keep-the-light{
+    -webkit-filter: drop-shadow(0 0 85px #6895ed );
+  filter: drop-shadow(0 0 85px #6895ed) brightness(190%);
+}
+.turnoff-the-light{
+    -webkit-filter: none;
+  filter: none;
+}
+#slide-2 form{
+    font-size: 2.5vmin;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+#slide-2 input{
+    margin-bottom: 5%;
+}
+#slide-2 button{
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 1.2em;
 
+}
+/*this one is for on/off button*/
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+.toggle.ios .toggle-handle { border-radius: 20rem; }
+
+#on-off{
+   display: none;
+}
+/*this class is for making shadow effect when light is on*/
+.shadow-1{
+ text-shadow: -10px -3px 5px #000000;
+}
+.shadow-2{
+    text-shadow: -10px -2px 5px #000000;
+}
+
+.box-shadow-2{
+box-shadow: -15px 2px 15px 3px rgba(0,0,0,0.84);
+-webkit-box-shadow: -15px 2px 15px 3px rgba(0,0,0,0.84);
+-moz-box-shadow: -15px 2px 15px 3px rgba(0,0,0,0.84);
+}
  /* ==========================================================================
    Helper classes
    ========================================================================== */

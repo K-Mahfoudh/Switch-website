@@ -10,3 +10,17 @@
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'kanitextralight';
+    src: url('../fonts/kanit-extralight/kanit-extralight-webfont.eot');
+    src: url('../fonts/kanit-extralight/kanit-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kanit-extralight/kanit-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/kanit-extralight/kanit-extralight-webfont.woff') format('woff'),
+         url('../fonts/kanit-extralight/kanit-extralight-webfont.ttf') format('truetype'),
+         url('../fonts/kanit-extralight/kanit-extralight-webfont.svg#kanitextralight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

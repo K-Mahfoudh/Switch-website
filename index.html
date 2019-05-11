@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Switch</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -52,8 +54,42 @@
       <div class="row"> 
         <div class="col-12 main-header-title-col">
             <h1>Switch</h1>
+            <h2>I will love the light for it shows me the way, yet I will endure the darkness because it shows me the stars.</h2> 
+        </div>
+        <div class="container main-content-info">
+            <div class="row">
+                <div class="col-sm-12 col-md-7" id="main-club-presentation-text"> 
+                    <div id="slide-1">
+                        <h2>Who are we?</h2>
+                        <p>A groupe of computer sciecne students of Saad Dahlab university of Blida, interested in many fields like Artificial intelligence, web development, security, design and more....</p>
+                    </div>
+                    
+                    <div id="slide-2"> 
+                        <h2 class="aplly-shadow-1">Do you have an idea??</h2>
+                        <p class="aplly-shadow-1">Let us know, it may be helpfull!<br/>By the way, if the light bothers you, you can turn it off, make yourself comfortable!</p>
+                             
+                        <form class="form-groupe" action="/action_page.php">
+                            <label for="email" class="aplly-shadow-2">Email address:</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <label for="comment" class="aplly-shadow-2">Your idea:</label>
+                            <textarea class="form-control" rows="5" id="comment" required></textarea>
+                            <button type="submit" class="btn btn-info"> Send</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <figure class="col-sm-12 col-md-5 main-club-presentation-img">
+                    <img src="img/lampe2.png" class="img-fluid" id="main-light-lampe" alt="man pulling a woman sitting on a lamp">
+                    <br/> <br/>
+                    <figcaption id="on-off"> 
+                        <input type="checkbox" checked data-toggle="toggle" data-style="ios" data-onstyle="info" data-offstyle="light" id="switch-button">
+                    </figcaption>
+                </figure>
+                
+            </div>  
         </div>
       </div>
+     
       <div id="stars"> </div>
       <div id="stars2"> </div>
       <div id="stars3"> </div>
@@ -61,13 +97,19 @@
     
   <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.4.0/js/bootstrap4-toggle.min.js"></script>
+
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  
 
 
   <script>
