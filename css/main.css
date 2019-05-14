@@ -202,9 +202,13 @@ textarea {
   from {opacity: 1;visibility: visible;}
   to {opacity: 0;visibility: hidden;}
 }
+.main-header-title-col{
+margin-top: 220px ; 
+display: none;
 
+}
 .main-header-title-col h1{
-    margin-top: 20vh;
+
     margin-bottom: 0px;
     font-size: 18vmin;
     text-align: center;
@@ -221,7 +225,7 @@ textarea {
     width: 39%;
     margin: auto;
     margin-top: 0px;
-    font-size:2.4vmin;
+    font-size:3.0vmin;
     font-family: 'kanitextralight','arial';
     font-weight: bold;
     text-align: center;
@@ -230,35 +234,47 @@ textarea {
     -webkit-text-fill-color: transparent;
   
 }
+.btn{
+font-family: 'kanitextralight','arial';
+    font-weight: bold;
+}
 .main-content-info{
-    margin-top: 20%;
+    margin-top: 25%;
     text-align: center;
     color: white;
     font-family: 'kanitextralight','arial';
 }
-.main-content-info h2{
+.main-content-info h2,.main-goals-text h2{
     font-size: 6vmin;
 }
-.main-content-info p{
+.main-content-info p, .main-goals-text p{
     font-size: 3vmin;
 }
 #main-club-presentation-text{
   padding-left: 7%;
 }
-
 .main-content-info figure{
-    text-align: center;
+    width: 100%;
+    
 }
+
 .main-content-info figure img{ /*this part is to controll the max size of the img*/
    max-width: 70vw;
    max-height: 70vh;
-   padding-top: 20%;
+   padding-top: 5%;
+    text-align: center;
+}
+.main-goals-img button{
+    margin-top: 3%;
 }
 .main-content-info figure img:hover{
  
   -webkit-filter: drop-shadow(0 0 85px #6895ed );
   filter: drop-shadow(0 0 85px #6895ed) brightness(180%); /* this part is to apply light effect on the lampe img (principalement faite pour avoir les idées des visiteurs du site,will explain it later)*/
   cursor: pointer;
+}
+#slide-1 a{
+    margin-top: 3%;
 }
 #slide-2{
     display: none;
@@ -282,9 +298,7 @@ textarea {
 }
 #slide-2 button{
     margin-top: 5%;
-    font-weight: bold;
-    font-size: 1.2em;
-
+    min-width: 100px;
 }
 /*this one is for on/off button*/
 .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
@@ -306,6 +320,121 @@ box-shadow: -15px 2px 15px 3px rgba(0,0,0,0.84);
 -webkit-box-shadow: -15px 2px 15px 3px rgba(0,0,0,0.84);
 -moz-box-shadow: -15px 2px 15px 3px rgba(0,0,0,0.84);
 }
+
+.main-goals{
+    margin-top: 25%
+}
+.main-goals-img img{
+     max-width: 50vw;
+   max-height: 50vh;
+}
+.main-goals-img {
+    text-align: center;
+}
+.main-goals-text{
+    padding-right: 10%;
+    text-align: center;
+    color: white;
+}
+
+
+/************** rocket lucnhing animation here ************************************/
+.animate-rocket-move{
+    animation-name: moving;
+    animation-duration: 30s;
+    animation-delay: 0.3s;
+    -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+}
+@keyframes moving{
+    0%{bottom: 0px; right: 0px;}
+     /*1%{transform: rotate(2deg) scale(0.8); bottom:50px; right: 0px;}*/
+    12%{transform: rotate(85deg) scale(0.8); bottom:400px; right: -160px;}
+    13%{transform: rotate(90deg) scale(0.8); bottom:400px; right: -500px;}
+    90%{transform: rotate(90deg) scale(0.8); bottom:400px; right:-500px;}
+    100%{transform: rotate(90deg) scale(0.8); bottom:400px; right: -8000px;}
+}
+
+#block-2{
+    display: none;
+    font-size: 10em;
+}
+
+.stick-fire {
+  position: absolute;
+  top: 86.3%;
+  left: 43.4%;
+  display: none;
+}
+
+#rocket-lunch{
+   position: relative;
+}
+
+.fire {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  transform:rotate(-180deg); /*to rotate the flame*/
+}
+.fire .flame {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: .9;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 70%;
+  border-bottom-left-radius: 70%;
+  border-top-left-radius: 70%;
+  transform: rotate(-45deg) skew(-10deg, -10deg);
+  background-color: #ff2200;
+  background-image: linear-gradient(to bottom left, rgba(255, 34, 0, 0.9), rgba(255, 106, 0, 0.7));
+  z-index: 1;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-name: burn-left;
+  animation-duration: 300ms;
+}
+.fire .flame:nth-of-type(2n) {
+  animation-name: burn-right;
+  animation-duration: 400ms;
+}
+.fire .flame:nth-of-type(2) {
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  background-color: #ff6a00;
+  background-image: linear-gradient(to bottom left, rgba(255, 106, 0, 0.1), rgba(255, 200, 0, 0.1));
+  z-index: 2;
+}
+.fire .flame:nth-of-type(3) {
+  height: 50%;
+  width: 50%;
+  left: 25%;
+  background-image: linear-gradient(to bottom left, #ffc800, #ffffff);
+  z-index: 3;
+}
+
+@keyframes burn-left {
+  0%, 100% {
+    transform: rotate(-45deg) skew(-10deg, -10deg) scale(1);
+  }
+  30%, 60% {
+    transform: rotate(-44deg) skew(-12deg, -12deg) scale(1.01);
+  }
+}
+@keyframes burn-right {
+  0%, 100% {
+    transform: rotate(-45deg) skew(-10deg, -10deg) scale(1);
+  }
+  30%, 60% {
+    transform: rotate(-46deg) skew(-6deg, -6deg) scale(1.01);
+  }
+}
+
+/********************end of rocket lunching animation here *********************/
+
  /* ==========================================================================
    Helper classes
    ========================================================================== */

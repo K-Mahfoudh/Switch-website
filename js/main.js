@@ -1,15 +1,19 @@
+/*===========================================================================================variables declarations parthere=================================================================*/
 //scrollValue to know position on the screen
 var scrollValue = 0;
 //noRepeatDown and noRepeatTop are made to avoid executing class change each time we scroll down
 var noRepeat = true;
+var on = true; // this one is used for on and off button
 
 
+/* ===========================================================================================main function here====================================================================*/
 
 function main(){
    scrollDetect();
    giveMeIdeas();
-    SwitchLight()
-    
+   SwitchLight();
+   addEffect('.main-header-title-col',"fadeIn",4000);
+    lunchRocket()
 }
 $(document).ready(main);
 
@@ -40,6 +44,8 @@ function scrollDetect(){
    })   
 }
 
+/*======================================= the rest of all otehr functions =============================================*/
+
 /* ===========================================================================================This function is for index page lampe event, when you click on the lamp, a box will disapear and a little form will appear, you never know we may need their ideas :D ====================================================================*/
 function giveMeIdeas(){
     $('#main-light-lampe').click(function(){
@@ -58,13 +64,91 @@ function giveMeIdeas(){
 }
 
 /* ===========================================================================================This function is for the on/off switch button====================================================================*/
-var on = true;
+
 function SwitchLight(){
     $('#switch-button').change(function() {
       $('#main-light-lampe').toggleClass('keep-the-light');
       $('.aplly-shadow-1').toggleClass('shadow-1');
       $('.aplly-shadow-2').toggleClass('shadow-2'); 
-      $('form input,textarea,button').toggleClass('box-shadow-2');
+      $('#ideas-form input,textarea,button').toggleClass('box-shadow-2');
     });
     }  
+
+/* ===========================================================================================this function is for applying effects on an element ====================================================================*/
+
+
+function addEffect(selector,effect,duration){
+        switch(effect){
+            case "fadeIn": $(selector).fadeIn(duration);
+                break;
+            case "fadeOut": $(selector).fadeOut(duration);
+                break;
+            case "slideUp": $(selector).slideUp(duration);
+                break;
+            case "slideDown": $(selector).slideDown(duration);
+                break;
+            case "hide": $(selector).hide(duration);
+                break;
+            case "show": $(selector).show(duration);
+                break;
+            case "toggle": $(selector).toggle(duration);
+                break;
+            default: console.log("you wrote " + effect + "are you sure?"); 
+        }
+}
+/* ===========================================================================================Rocket lunching button event function ====================================================================*/
+
+function countDown(){
+    var counter = 3;
+   var x = setInterval(function(){   
+     $("#block-2").text(counter);
+    counter--;
+    console.log(counter);
+   if(counter === -1) { 
+        $("#block-2").text("go!");
+        $("#block-2").fadeOut(1000);
+        clearInterval(x);
+        $('.main-goals-img').animate({top:"220px"},1000,function(){
+        $('.stick-fire ').fadeIn(300);//rocket fire appears
+        $('#rocket-lunch').addClass('animate-rocket-move');//rocket moving
+       });
+        
+   }
+       
+},1000);
+   
+}
+
+function lunchRocket(){
+    $('#lunch').click(function(){
+        setTimeout(fastStarsMove,9000);
+        setTimeout(normalStarsMove,33000);
+        setTimeout(function(){$('.main-goals-img').hide()},33000);
+        $('#rocket-lunch').css('transform','scale(0.8)');
+        $('#lunch').animate({opacity:0},"slow");
+        $('#block-1').fadeOut(1000);
+        $('#block-2').delay(1000).fadeIn(3000);
+        countDown();
+      
+    });
+}
+
+var fastStarsMove = function(){
+    $('#stars').css('animation','animStar 1s linear infinite');
+    $('#stars:after').css('top','500px');
+    $('#stars2').css('animation','animStar 4s linear infinite');
+    $('#stars2:after').css('top','500px');
+    $('#stars3').css('animation','animStar 14s linear infinite');
+    $('#stars3:after').css('top','500px');
+}
+
+var normalStarsMove = function(){
+    $('#stars').css('animation','animStarTop 50s linear infinite');
+    $('#stars:after').css('top','2000px');
+    $('#stars2').css('animation','animStarTop 100s linear infinite');
+    $('#stars2:after').css('top','2000px');
+    $('#stars3').css('animation','animStarTop 150s linear infinite');
+    $('#stars3:after').css('top','2000px');
+}
+
 
